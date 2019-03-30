@@ -134,6 +134,7 @@ html {
   height: 150px;
 }
 #send-button {
+  position: relativ;
   color: #484848;
   width: 198px;
   height: 53px;
@@ -143,6 +144,9 @@ html {
   background: url(images/button-gradient.png) repeat-x;
   border-color: #cf7200;
   margin-top: 40px;
+}
+#send-button:hover {
+  cursor: pointer;
 }
 label {
   display: inline-block;
@@ -174,9 +178,6 @@ input[type=checkbox] {
   transform: scale(1.2);
   color: #e8e8e8;
 }
-#button-wrapper {
-  position: relative;
-}
 #btn-arrow {
   position: absolute;
   top: 60px;
@@ -187,14 +188,47 @@ input[type=checkbox] {
     width: 960px;
   }
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1000px) {
   .main-container {
-    width: 740px;
+    width: 100%;
+  }
+  #form {
+    height: 100%;
+  }
+  #html-button {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
   .main-container {
     width: 100%;
+  }
+  #form {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+    max-width: 100%;
+  }
+  #html-button {
+    display: none;
+  }
+  .big-input {
+    width: 80%;
+    height: 45px;
+  }
+  #icon-3 {
+    margin-top: 37px;
+    margin-left: 38px;
+  }
+  #icon-4 {
+    margin-top: 25px;
+    margin-left: 37px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100% !important;
   }
 }
 @media screen and (max-width: 480px) {
@@ -210,4 +244,63 @@ input[type=checkbox] {
   .main-container {
     width: 100%;
   }
+  .container {
+    height: 100%;
+  }
+  #form {
+    height: 100%;
+  }
+  #html-button {
+    display: none;
+  }
+}
+.link:before {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  pointer-events: none;
+  left: 50%;
+  transform: translate3d(-50%, 0%, 0);
+  transition: all .3s ease;
+  transition-delay: 1.2s;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #282828 transparent transparent transparent;
+}
+.link:after {
+  text-transform: none;
+  content: attr(data-tooltip);
+  font-size: 1.5rem;
+  position: absolute;
+  color: #fff;
+  background: #282828;
+  padding: 8px 12px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: 160px;
+  height: 95px;
+  max-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  right: -53px;
+  top: 292px;
+  border-radius: 12px;
+  transform: translate3d(-50%, 0%, 0);
+  transition: all .3s ease;
+  text-align: center;
+}
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.link:hover .link:before,
+.link:hover:after {
+  opacity: 0.75;
+}
+.link:hover .link:before {
+  transform: translate3d(-50%, calc(-118%), 0);
+}
+.link:hover .link:after {
+  transform: translate3d(-50%, calc(-116%), 0);
 }

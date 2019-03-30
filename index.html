@@ -13,7 +13,8 @@
 
 <body>
     <div class="main-container">
-        <a href="#"><img src="./images/HTML button.png" id="html-button" alt="" srcset=""></a>
+        
+        <a href="#" class="link" target="_blank" draggable="false" data-tooltip="This popup window opens on mouseover"><img src="./images/HTML button.png"   id="html-button" alt="" srcset=""></a>
         <img src="./images/Crtv_desktop.jpg" id="car" alt="car" width="960" height="450" srcset="" class="responsive">
         <img src="./images/Creative_mobile.jpg" id="car-mobile" alt="car" width="465" height="410" srcset=""
             class="responsive">
@@ -22,27 +23,27 @@
             <img src="./images/border.png" alt="border" id="top-border" class="border" srcset="">
             <div class="container p-0">
                 <form action="">
-                    <div class="row no-gutters">
-                        <div class="col-sm-5 ">
-                            <div class="row  no-gutters">
+                    <div class="row  no-gutters">
+                        <div class="col-md-5  col-sm-12 inputs-1">
+                            <div class="row   no-gutters">
                                 <div id="icon-1"> <img src="./images/Shape 5.png" width="26" height="26" alt=""
                                         srcset=""></div>
-                                <input type="text" value="Full Name" class="big-input" name="" id="full-name">
+                                <input type="text" placeholder="Full Name" class="big-input" name="" id="full-name">
                             </div>
                             <div class="row  no-gutters">
                                 <div id="icon-2"> <img src="./images/Shape 6.png" width="29" height="21" alt=""
                                         srcset=""></div>
-                                <input type="email" value="Email" class="big-input" name="" id="email">
+                                <input type="email" placeholder="Email" class="big-input" name="" id="email">
                             </div>
                         </div>
-                        <div class="col-sm-4  ">
-                            <div class="row no-gutters">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="row  no-gutters">
                                 <div id="icon-3"> <img src="./images/Shape 3.png" width="26" height="26" alt=""
                                         srcset=""></div>
-                                <input type="text" value="+000" name="" id="phone-code">
-                                <input type="text" value="Phone Number" name="" id="phone-number">
+                                <input type="text" placeholder="+000" name="" id="phone-code">
+                                <input type="text" placeholder="Phone Number" name="" id="phone-number">
                             </div>
-                            <div class="row no-gutters">
+                            <div class="row  no-gutters">
                                 <div id="icon-4"> <img src="./images/Shape 4.png" width="26" height="26" alt=""
                                         srcset=""></div>
                                 <select name="" aria-placeholder="Country" class="big-input" id="select">
@@ -50,15 +51,17 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div id="button-wrapper">
-                                <img src="./images/Shape 1.png" alt="arrow" id="btn-arrow" srcset="">
-                                <button id="send-button">Send</button>
+                        <div class="col-md-3 col-sm-12">
+                            <div class="row ">
+                                <button class="wobble-horizontal" type="submit" id="send-button"> <img
+                                        src="./images/Shape 1.png" alt="arrow" id="btn-arrow" srcset="">Send</button>
                             </div>
-                            <div class="inline-field">
-                                <input type="checkbox" id="checkbox">
-                                <label for="checkbox"><span id="no-decorated"> I agree with the </span><span
-                                        id="decorated">Terms & Conditions</span></label>
+                            <div class="row ">
+                                <div class="inline-field">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox"><span id="no-decorated"> I agree with the </span><span
+                                            id="decorated">Terms & Conditions</span></label>
+                                </div>
                             </div>
                         </div>
                     </div>
