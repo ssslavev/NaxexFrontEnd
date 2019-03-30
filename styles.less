@@ -109,6 +109,7 @@ body, html {
 #select {
     margin-top: 12px;
     padding-left: 15px;
+    color: #484848;
 }
 
 #full-name {
@@ -222,7 +223,7 @@ input[type=checkbox] {
   #btn-arrow {
       position: absolute;
       top: 60px;
-      right: 205px;
+      right: 90%
   }
 
   
@@ -239,12 +240,7 @@ input[type=checkbox] {
 }
 
 @media screen and (max-width: 1000px) {
-    .main-container { 
-        
-        width: 100%;
-        
-    }
-
+   
     #form {
         height: 100%;
     }
@@ -294,9 +290,29 @@ input[type=checkbox] {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         max-width: 100% !important;
+    }
+
+    #btn-row {
+        justify-content: center;
+    }
+
+    #agreement-row {
+        justify-content: center;
+        margin-top: 32px;
+        margin-bottom: 188px;
+        
+        #decorated, #no-decorated {
+            font-size: 1.8rem;
+        }
+    }
+
+    #btn-arrow {
+        position: absolute;
+        top: 60px;
+        right: 59%;
     }
 
 
@@ -319,7 +335,7 @@ input[type=checkbox] {
 
     .main-container { 
         
-        width: 100%;
+        width: 95%;
     }
 
     .container {
@@ -328,12 +344,98 @@ input[type=checkbox] {
 
     #form {
         height: 100%;
+        font-size: 2.2rem;
     }
 
     #html-button {
         display: none;
     }
-    
+
+    .big-input {
+        width: 366px;
+        height: 60px;
+    }
+
+    #phone-code {
+        width: 102px;
+        height: 60px;
+        margin-top: 15px;
+        font-size: 2.2rem;
+        margin-left: 18px;
+    }
+
+    #phone-number {
+        width: 250px;
+        height: 60px;
+        margin-top: 15px;
+        font-size: 2.2rem;
+    }
+
+    #email {
+        margin-top: 15px;
+        font-size: 2.2rem;
+
+    }
+
+    #full-name {
+        font-size: 2.2rem;
+    }
+
+    #select {
+        margin-top: 15px;
+        font-size: 2.2rem;
+        margin-left: 18px;
+    }
+
+
+    #send-button {
+        display: inline-block;
+        width: 350px;
+        height: 92px;
+        background: url(./images/btn-mobile-gradient.png) repeat-x;
+        font-size: 4.5rem;
+        margin-top: 38px;
+
+        #btn-arrow {
+            top: 74px;
+            right: 75%;
+            height: 29px;
+            width: 26px;
+        }
+    }
+
+    #icon-1, #icon-2, #icon-3, #icon-4 {
+        margin-left: 20px;
+    }
+
+    #icon-1 {
+        margin-top: 45px;
+    }
+
+    #icon-2 {
+        margin-top: 35px;
+    }
+
+    #icon-3 {
+        margin-top: 33px;
+    }
+
+   
+
+    #btn-row {
+        justify-content: center;
+    }
+
+    #agreement-row {
+        justify-content: center;
+        margin-top: 32px;
+        margin-bottom: 188px;
+        
+        #decorated, #no-decorated {
+            font-size: 1.8rem;
+        }
+    }
+  
 }
 
 
@@ -341,16 +443,16 @@ input[type=checkbox] {
     .link:before {
       content: "";
       position: absolute;
-      opacity: 0.5;
+      opacity: 0;
       pointer-events: none;
-      left: 50%;
+      left: 88%;
+      top: 61%;
       transform: translate3d(-50%,0%,0);
       transition: all .3s ease;
-      transition-delay: 1.2s;
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 10px 10px 0 10px;
+      border-width: 16px 15px 0 15px;
       border-color: #282828 transparent transparent transparent;
     }
     // TOOLTIP BUBBLE
@@ -369,18 +471,19 @@ input[type=checkbox] {
       max-width: 200px;
       opacity: 0;
       pointer-events: none;
-      right: -53px;
-      top: 292px;
+      right: -49px;
+      top: 286px;
       border-radius: 12px;
       transform: translate3d(-50%,0%,0);
       transition: all .3s ease;
       text-align: center;
+      padding-top: 18px;
       
     }
     .link:hover {
       background-color: rgba(0,0,0,0.5);
       // TOOLTIP FADEIN AND TRANSLATION
-      .link:before, &:after {
+      &:before, &:after {
         opacity: 0.75;
       }
       .link:before {
