@@ -88,10 +88,14 @@ html {
 }
 #email {
   margin-top: 12px;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  border: none;
 }
 #phone-code,
 #select {
   margin-left: 12px;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  border: none;
 }
 #select {
   margin-top: 12px;
@@ -127,6 +131,8 @@ html {
   margin-left: 10px;
   margin-top: 28px;
   padding-left: 12px;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  border: none;
 }
 #little-col {
   width: 90%;
@@ -190,14 +196,26 @@ input[type=checkbox] {
   }
 }
 @media screen and (max-width: 1000px) {
+  .big-input {
+    min-width: 80%;
+  }
   #form {
+    height: 100%;
+  }
+  .container {
     height: 100%;
   }
   #html-button {
     display: none;
   }
+  form .row {
+    justify-content: center;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  form .row {
+    justify-content: center;
+  }
   .main-container {
     width: 100%;
   }
@@ -208,8 +226,44 @@ input[type=checkbox] {
     height: 100%;
     max-width: 100%;
   }
+  #select-row {
+    margin-left: 80px;
+  }
+  #btn-row {
+    justify-content: center;
+  }
+  #agreement-row {
+    justify-content: center;
+  }
+  #btn-arrow {
+    position: absolute;
+    top: 60px;
+    right: 90%;
+  }
+  #send-button {
+    width: 40%;
+  }
+  .inline-field {
+    margin-top: 18px;
+    margin-left: -25px;
+  }
+  #code-row {
+    margin-left: 87px;
+  }
+  #agreement-row #decorated,
+  #agreement-row #no-decorated {
+    font-size: 1rem;
+    margin-top: -7px;
+    margin-left: 5px;
+  }
   #html-button {
     display: none;
+  }
+  #phone-number {
+    width: 78%;
+  }
+  #select {
+    width: 90%;
   }
   .big-input {
     width: 80%;
@@ -217,36 +271,17 @@ input[type=checkbox] {
   }
   #icon-3 {
     margin-top: 37px;
-    margin-left: 38px;
+    margin-left: -50px;
   }
   #icon-4 {
     margin-top: 25px;
-    margin-left: 37px;
+    margin-left: -50px;
+  }
+  #bottom-border {
+    margin-top: 20px;
   }
 }
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 100% !important;
-  }
-  #btn-row {
-    justify-content: center;
-  }
-  #agreement-row {
-    justify-content: center;
-    margin-top: 32px;
-    margin-bottom: 188px;
-  }
-  #agreement-row #decorated,
-  #agreement-row #no-decorated {
-    font-size: 1.8rem;
-  }
-  #btn-arrow {
-    position: absolute;
-    top: 60px;
-    right: 59%;
-  }
-}
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   #car {
     display: none;
   }
@@ -272,6 +307,7 @@ input[type=checkbox] {
   .big-input {
     width: 366px;
     height: 60px;
+    max-width: 80%;
   }
   #phone-code {
     width: 102px;
@@ -279,24 +315,29 @@ input[type=checkbox] {
     margin-top: 15px;
     font-size: 2.2rem;
     margin-left: 18px;
+    max-width: 20%;
   }
   #phone-number {
     width: 250px;
     height: 60px;
     margin-top: 15px;
     font-size: 2.2rem;
+    max-width: 52%;
   }
   #email {
     margin-top: 15px;
     font-size: 2.2rem;
+    max-width: 75%;
   }
   #full-name {
     font-size: 2.2rem;
+    max-width: 75%;
   }
   #select {
     margin-top: 15px;
     font-size: 2.2rem;
     margin-left: 18px;
+    max-width: 75%;
   }
   #send-button {
     display: inline-block;
@@ -305,6 +346,8 @@ input[type=checkbox] {
     background: url(images/btn-mobile-gradient.png) repeat-x;
     font-size: 4.5rem;
     margin-top: 38px;
+    margin-left: 15px;
+    max-width: 80%;
   }
   #send-button #btn-arrow {
     top: 74px;
@@ -338,6 +381,74 @@ input[type=checkbox] {
   #agreement-row #decorated,
   #agreement-row #no-decorated {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  form .row {
+    justify-content: center;
+  }
+  #icon-1,
+  #icon-2,
+  #icon-3,
+  #icon-4 {
+    display: none;
+  }
+  .main-container {
+    min-width: 100%;
+  }
+  #car {
+    display: none;
+  }
+  #car-mobile {
+    display: flex;
+  }
+  #full-name {
+    max-width: 70%;
+  }
+  #email {
+    max-width: 69%;
+    margin-left: 15%;
+  }
+  #phone-code {
+    max-width: 26%;
+    margin-left: 15%;
+  }
+  #phone-number {
+    max-width: 40%;
+  }
+  #select {
+    max-width: 70%;
+    margin-left: 15%;
+  }
+  #send-button {
+    width: 70%;
+    margin-left: 15px;
+  }
+  #btn-row {
+    justify-content: center;
+  }
+  #agreement-row #no-decorated {
+    font-size: 1.8rem;
+    display: block;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-container {
+    max-width: 100%;
+  }
+  #icon-1,
+  #icon-2,
+  #icon-3,
+  #icon-4 {
+    display: none;
+  }
+  #full-name {
+    width: 85%;
+    margin-left: 0;
+  }
+  #form input,
+  #select {
+    font-size: 1.5rem;
   }
 }
 .link:before {
