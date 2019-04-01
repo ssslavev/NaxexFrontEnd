@@ -16,6 +16,10 @@ body, html {
     background-size: 100% 100%; 
 }
 
+html {
+    margin-bottom: 60px;
+}
+
 .main-container {
     width: 960px;
     margin: 0 auto;
@@ -57,6 +61,26 @@ body, html {
     max-width: 100%;
     vertical-align: middle;
     display: table-cell;
+  }
+
+  .container:before, .container:after {
+    z-index: -1; 
+    position: absolute; 
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%; 
+    top: 80%;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(-3deg);
+  }
+
+  .container:after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
   }
 
 #full-name, #email  {
@@ -261,8 +285,10 @@ input[type=checkbox] {
     
     
   }
-  
 
+ 
+  
+  
 
 @media screen and (max-width: 1400px) {
     .main-container { 
